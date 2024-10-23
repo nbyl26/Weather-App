@@ -1,0 +1,96 @@
+/* Menggunakan font Poppins dari Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-app {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+input {
+    padding: 15px;
+    width: 80%;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 15px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fcc;
+}
+
+#weather-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#weather-info h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#temperature {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#description {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#city-name {
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Query untuk Tampilan Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    .weather-app {
+        padding: 20px;
+    }
+    button, input {
+        width: 100%;
+    }
+}
